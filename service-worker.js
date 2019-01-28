@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Oluwaseunus/Random-Quote-Generator/precache-manifest.7250078114d0a15b5477b8a4ede26b1f.js"
+  "/Random-Quote-Generator/precache-manifest.a6cdcd9016a1647c4a0b1ee8252984cc.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Oluwaseunus/Random-Quote-Generator/index.html", {
+workbox.routing.registerNavigationRoute("/Random-Quote-Generator/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
