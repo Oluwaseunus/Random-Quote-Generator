@@ -2,7 +2,7 @@
 	"name": "front-end-libraries-challenges",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://github.com/Oluwaseunus/Random-Quote-Generator",
+	"homepage": "https://Oluwaseunus.github.io/Random-Quote-Generator",
 	"dependencies": {
 		"gh-pages": "^2.0.1",
 		"react": "^16.7.0",
