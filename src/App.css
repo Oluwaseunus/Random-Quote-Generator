@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1.6rem;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+	padding: 40px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.3s;
+	overflow: auto;
+	max-width: 95vw;
+	max-height: 90vh;
+}
+
+.wrapper__author {
+	padding-top: 1rem;
+	float: right;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+	padding: 0.4rem 1rem;
+	margin-top: 1rem;
+	display: inline-block;
+	border-radius: 1rem;
+	transition: all 0.3s ease;
+	position: relative;
+	box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+
+	/* Change for the button element */
+	border: none;
+	cursor: pointer;
+}
+
+.btn,
+.btn:link,
+.btn:visited :not(:last-child) {
+	margin-right: 1rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited:hover {
+	transform: translateY(-0.3rem);
+}
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	transition: all 0.3s ease;
+}
+
+.quote {
+	margin-right: 8px;
+}
+
+@media (max-width: 900px) {
+	body {
+		font-size: 20px;
+	}
+
+	.wrapper {
+		width: 90vw;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+
+	.wrapper {
+		width: 90vw;
+	}
+}
