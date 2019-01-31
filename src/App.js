@@ -54,17 +54,38 @@ const store = createStore(quoteReducer);
 
 // React
 
+let quotes = [];
+
 class App extends Component {
-	componentDidMount = () => this.getQuotes();
+	componentDidMount = async () => {
+		const response = await fetch(QUOTES_API);
+		const data = await response.json();
+		quotes = data.quotes;
+		this.getQuotes();
+
+		window.addEventListener('keypress', this.handleKeyPress);
+	};
+
+	componentWillUnmount = () =>
+		window.removeEventListener('keypress', this.handleKeyPress);
+
+	handleKeyPress = event => {
+		switch (event.key.toUpperCase()) {
+			case 'R':
+				this.getQuotes();
+				break;
+			case 'T':
+				document.getElementById('tweet-quote').click();
+				break;
+			default:
+				break;
+		}
+	};
 
 	getQuotes = () => {
 		const color = colorsArray[Math.floor(Math.random() * 10)];
-		fetch(QUOTES_API)
-			.then(response => response.json())
-			.then(data => {
-				const { quote, author } = data.quotes[Math.floor(Math.random() * 102)];
-				this.props.submitNewQuote(quote, author, color);
-			});
+		const { quote, author } = quotes[Math.floor(Math.random() * 102)];
+		this.props.submitNewQuote(quote, author, color);
 	};
 
 	render() {
